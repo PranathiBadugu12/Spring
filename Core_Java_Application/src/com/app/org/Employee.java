@@ -4,14 +4,21 @@ public class Employee {
 	private int empId;
 	private String name;
 	private double salary;
+	private Address address;
 	public Employee() {
 		System.out.println("Default constructor is called");
+		empId=0;
+		name="";
+		salary=0;
+		address=new Address();
 	}
-	public Employee(int empId, String name, double salary) {
+	
+	public Employee(int empId, String name, double salary, Address address) {
 		super();
 		this.empId = empId;
 		this.name = name;
 		this.salary = salary;
+		this.address = address;
 	}
 	public int getEmpId() {
 		return empId;
@@ -31,10 +38,18 @@ public class Employee {
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
 	@Override
 	public String toString() {
-		return "Employee [empId=" + empId + ", name=" + name + ", salary=" + salary + "]";
+		return "Employee [empId=" + empId + ", name=" + name + ", salary=" + salary + ", address=" + address + "]";
 	}
+	
 	
 	
 }
