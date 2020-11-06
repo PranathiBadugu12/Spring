@@ -1,5 +1,6 @@
 package com.app.org;
 
+
 public class Project {
 	private String projectId;
 	private String projectName;
@@ -7,9 +8,9 @@ public class Project {
 	
 	public Project() {
 		super();
-		this.projectId = projectId;
-		this.clientName = clientName;
-		this.projectName = projectName;
+		this.projectId = "";
+		this.clientName = "";
+		this.projectName = "";
 		// TODO Auto-generated constructor stub
 	}
 
