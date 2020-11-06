@@ -9,7 +9,7 @@ public class Employee {
 	private double salary;
 	private Address address;
 	private List<String> technologies;
-	private List<String> projects;
+	private List<Project> projects;
 	public Employee() {
 		System.out.println("Default constructor is called");
 		empId=0;
@@ -25,7 +25,7 @@ public class Employee {
 
 
 	public Employee(int empId, String name, double salary, Address address, List<String> technologies,
-			List<String> projects) {
+			List<Project> projects) {
 		super();
 		this.empId = empId;
 		this.name = name;
@@ -68,12 +68,12 @@ public class Employee {
 		this.address = address;
 	}
 	
-	public List<String> getProjects() {
+	public List<Project> getProjects() {
 		return projects;
 	}
 
 
-	public void setProjects(List<String> projects) {
+	public void setProjects(List<Project> projects) {
 		this.projects = projects;
 	}
 	
