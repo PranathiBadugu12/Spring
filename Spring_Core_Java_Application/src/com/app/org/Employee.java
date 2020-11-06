@@ -21,14 +21,7 @@ public class Employee {
 	}
 	
 
-	public List<String> getProjects() {
-		return projects;
-	}
-
-
-	public void setProjects(List<String> projects) {
-		this.projects = projects;
-	}
+	
 
 
 	public Employee(int empId, String name, double salary, Address address, List<String> technologies,
@@ -75,7 +68,15 @@ public class Employee {
 		this.address = address;
 	}
 	
+	public List<String> getProjects() {
+		return projects;
+	}
 
+
+	public void setProjects(List<String> projects) {
+		this.projects = projects;
+	}
+	
 	@Override
 	public String toString() {
 		return "Employee [empId=" + empId + ", name=" + name + ", salary=" + salary + ", address=" + address
