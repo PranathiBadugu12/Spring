@@ -6,8 +6,8 @@ import java.util.List;
 public class Vendor extends User{
 	private String name;
 	private String description;
-	private LocalTime openingTime;
-	private LocalTime closingTime;
+	private String openingTime;
+	private String closingTime;
 	private List<File> images;
 	private List<Bookable> offers;
 	private List<Amenity> amenities;
@@ -15,7 +15,7 @@ public class Vendor extends User{
 		super();
 	}
 	public Vendor(String email, String password, String phonenumber, Address address, boolean verified, List<Role> roles,
-			boolean enabled,String name, String description, LocalTime openingTime, LocalTime closingTime, List<File> images,
+			boolean enabled,String name, String description, String openingTime, String closingTime, List<File> images,
 			List<Bookable> offers, List<Amenity> amenities) {
 		super( email,  password,  phonenumber,  address,  verified,  roles, enabled);
 		this.name = name;
@@ -38,16 +38,16 @@ public class Vendor extends User{
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public LocalTime getOpeningTime() {
+	public String getOpeningTime() {
 		return openingTime;
 	}
-	public void setOpeningTime(LocalTime openingTime) {
+	public void setOpeningTime(String openingTime) {
 		this.openingTime = openingTime;
 	}
-	public LocalTime getClosingTime() {
+	public String getClosingTime() {
 		return closingTime;
 	}
-	public void setClosingTime(LocalTime closingTime) {
+	public void setClosingTime(String closingTime) {
 		this.closingTime = closingTime;
 	}
 	public List<File> getImages() {

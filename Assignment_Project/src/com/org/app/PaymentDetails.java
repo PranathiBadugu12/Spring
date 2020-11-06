@@ -5,11 +5,11 @@ import java.util.Date;
 public class PaymentDetails {
 	private double amount;
 	private String description;
-	private Date paymentDate;
+	private String paymentDate;
 	public PaymentDetails() {
 		super();
 	}
-	public PaymentDetails(double amount, String description, Date paymentDate) {
+	public PaymentDetails(double amount, String description, String paymentDate) {
 		super();
 		this.amount = amount;
 		this.description = description;
@@ -27,10 +27,10 @@ public class PaymentDetails {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Date getPaymentDate() {
+	public String getPaymentDate() {
 		return paymentDate;
 	}
-	public void setPaymentDate(Date paymentDate) {
+	public void setPaymentDate(String paymentDate) {
 		this.paymentDate = paymentDate;
 	}
 	@Override

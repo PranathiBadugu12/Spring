@@ -10,6 +10,7 @@ public class MainFile {
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		User e1 = (User) context.getBean("UserBean");
 		Vendor v1 = (Vendor) context.getBean("vendor");
-		System.out.println(v1);
+		Customer c1 = (Customer) context.getBean("customer");
+		System.out.println(c1);
 	}
 }

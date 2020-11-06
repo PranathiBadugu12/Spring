@@ -11,6 +11,21 @@
 	    <constructor-arg value="1001" type="String"/>
 	    <constructor-arg value="1001" type="String"/>
     </bean>
+    <bean id="cus1" class="com.org.app.CustomerType">
+	    <constructor-arg value="Ars" type="String"/>
+    </bean>
+    <bean id="pay1" class="com.org.app.PaymentDetails">
+	    <constructor-arg value="101" type="double"/>
+	    <constructor-arg value="Ars" type="String"/>
+	    <constructor-arg value="12-11-2020" type="String"/>
+    </bean>
+   <bean id="pay2" class="com.org.app.PaymentDetails">
+	    <constructor-arg value="101" type="double"/>
+	    <constructor-arg value="Ars" type="String"/>
+	    <constructor-arg value="12-11-2020" type="String"/>
+    </bean>
+    
+    
     <bean id="off1" class="com.org.app.Bookable">
 	    <constructor-arg value="101" type="int"/>
 	    <constructor-arg value="Ars" type="String"/>
@@ -65,8 +80,8 @@
     <bean id="vendor" class = "com.org.app.Vendor" parent="UserBean">
     <property name="name" value="a"></property>
     <property name="description" value="a"></property>
-    <property name="openingTime" value="15:34:38.466"></property>
-    <property name="closingTime" value="15:34:38.466"></property>
+    <property name="openingTime" value="15:34"></property>
+    <property name="closingTime" value="15:34"></property>
     <property name="offers">
 		<list>
 			<ref bean="off1"/>
@@ -86,5 +101,22 @@
 	    </list>
 	 </property>
     </bean>   
-               
+   <bean id="customer" class = "com.org.app.Customer" parent="UserBean">
+    <property name="forename" value="a"></property>
+    <property name="surname" value="a"></property>
+    <property name="customerType" ref="cus1"></property>
+    <property name="favorites">
+		<list>
+			<ref bean="off1"/>
+	    	<ref bean="off2"/>
+	    </list>
+	 </property>
+	 <property name="paymentDetails">
+		<list>
+			<ref bean="pay1"/>
+	    	<ref bean="pay2"/>
+	    </list>
+	 </property>
+    
+    </bean>   
 </beans>
