@@ -11,7 +11,7 @@ public class Customer extends User{
 	public Customer() {
 		super();
 	}
-	public Customer(String email, String password, String phonenumber, String address, boolean verified, List<Role> roles,
+	public Customer(String email, String password, String phonenumber, Address address, boolean verified, List<Role> roles,
 			boolean enabled,String forename, String surname, List<PaymentDetails> paymentDetails, List<Bookable> favorites,
 			CustomerType customerType) {
 		super( email,  password,  phonenumber,  address,  verified,  roles, enabled);

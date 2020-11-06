@@ -14,7 +14,7 @@ public class Vendor extends User{
 	public Vendor() {
 		super();
 	}
-	public Vendor(String email, String password, String phonenumber, String address, boolean verified, List<Role> roles,
+	public Vendor(String email, String password, String phonenumber, Address address, boolean verified, List<Role> roles,
 			boolean enabled,String name, String description, LocalTime openingTime, LocalTime closingTime, List<File> images,
 			List<Bookable> offers, List<Amenity> amenities) {
 		super( email,  password,  phonenumber,  address,  verified,  roles, enabled);

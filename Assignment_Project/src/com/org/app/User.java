@@ -5,7 +5,7 @@ public class User {
 	private String email;
 	private String password;
 	private String phonenumber;
-	private String address;
+	private Address address;
 	private boolean verified;
 	private List<Role> roles;
 	private boolean enabled;
@@ -14,7 +14,7 @@ public class User {
 		super();
 	}
 
-	public User(String email, String password, String phonenumber, String address, boolean verified, List<Role> roles,
+	public User(String email, String password, String phonenumber, Address address, boolean verified, List<Role> roles,
 			boolean enabled) {
 		super();
 		this.email = email;
@@ -50,11 +50,11 @@ public class User {
 		this.phonenumber = phonenumber;
 	}
 
-	public String getAddress() {
+	public Address getAddress() {
 		return address;
 	}
 
-	public void setAddress(String address) {
+	public void setAddress(Address address) {
 		this.address = address;
 	}
 
