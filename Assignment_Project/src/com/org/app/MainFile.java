@@ -9,6 +9,7 @@ public class MainFile {
 	public static void main(String args[]) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		User e1 = (User) context.getBean("UserBean");
-		System.out.println(e1);
+		Vendor v1 = (Vendor) context.getBean("vendor");
+		System.out.println(v1);
 	}
 }

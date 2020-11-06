@@ -10,7 +10,31 @@
 	    <constructor-arg value="Ars" type="String"/>
 	    <constructor-arg value="1001" type="String"/>
 	    <constructor-arg value="1001" type="String"/>
+    </bean>
+    <bean id="off1" class="com.org.app.Bookable">
+	    <constructor-arg value="101" type="int"/>
+	    <constructor-arg value="Ars" type="String"/>
+    </bean> 
+    <bean id="off2" class="com.org.app.Bookable">
+	    <constructor-arg value="101" type="int"/>
+	    <constructor-arg value="Ars" type="String"/>
     </bean>  
+    <bean id="ame1" class="com.org.app.Amenity">
+	    <constructor-arg value="101" type="String"/>
+	    <constructor-arg value="Ars" type="String"/>
+    </bean> 
+    <bean id="ame2" class="com.org.app.Amenity">
+	    <constructor-arg value="101" type="String"/>
+	    <constructor-arg value="Ars" type="String"/>
+    </bean> 
+    <bean id="fil1" class="com.org.app.File">
+	    <constructor-arg value="101" type="String"/>
+	    <constructor-arg value="Ars" type="String"/>
+    </bean> 
+    <bean id="fil2" class="com.org.app.File">
+	    <constructor-arg value="101" type="String"/>
+	    <constructor-arg value="Ars" type="String"/>
+    </bean> 
     <bean id="role1" class="com.org.app.Role">
 	    <constructor-arg value="101" type="String"/>
 	    <constructor-arg value="Ars" type="String"/>
@@ -36,6 +60,31 @@
 	    	<ref bean="role3"/>
 	    </list>
 	    </property>
-     </bean>        
+     </bean>     
+  
+    <bean id="vendor" class = "com.org.app.Vendor" parent="UserBean">
+    <property name="name" value="a"></property>
+    <property name="description" value="a"></property>
+    <property name="openingTime" value="15:34:38.466"></property>
+    <property name="closingTime" value="15:34:38.466"></property>
+    <property name="offers">
+		<list>
+			<ref bean="off1"/>
+	    	<ref bean="off2"/>
+	    </list>
+	 </property>
+	 <property name="images">
+		<list>
+			<ref bean="fil1"/>
+	    	<ref bean="fil2"/>
+	    </list>
+	 </property>
+    <property name="amenities">
+		<list>
+			<ref bean="ame1"/>
+	    	<ref bean="ame2"/>
+	    </list>
+	 </property>
+    </bean>   
                
 </beans>
