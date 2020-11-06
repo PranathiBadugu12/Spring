@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
+    
+    <bean id="add1" class="com.app.org.Address">
+	    <constructor-arg value="101" type="String"></constructor-arg>
+	    <constructor-arg value="Ars" type="String"></constructor-arg>
+	    <constructor-arg value="1001" type="String"></constructor-arg>
+	    <constructor-arg value="1001" type="String"></constructor-arg>
+    </bean> 
+    <!-- <bean id="empBean" class="com.app.org.Employee">
+		<property name="empId" value="101"></property>
+		<property name="name" value="p"></property>
+		<property name="salary" value="1000"></property>
+		<property name="address" ref="add1"></property>
+		<property name="technologies">
+			<list>
+				<value>Java</value>
+				<value>CPP</value>
+				<value>.NET</value>
+			</list>
+		</property>
+    </bean>  -->
+    
+    <bean id="prj1" class="com.app.org.Project">
+    	<constructor-arg value="1" type="String"></constructor-arg>
+    	<constructor-arg value="ha" type="String"></constructor-arg>
+    	<constructor-arg value="hi" type="String"></constructor-arg>
+    </bean>
+    <bean id="prj2" class="com.app.org.Project">
+    	<constructor-arg value="2" type="String"></constructor-arg>
+    	<constructor-arg value="ha" type="String"></constructor-arg>
+    	<constructor-arg value="hi" type="String"></constructor-arg>
+    </bean>
+    <bean id="prj3" class="com.app.org.Project">
+    	<constructor-arg value="3" type="String"></constructor-arg>
+    	<constructor-arg value="ha" type="String"></constructor-arg>
+    	<constructor-arg value="hi" type="String"></constructor-arg>
+    </bean>
+   <bean id="empBean" class="com.app.org.Employee">
+	    <constructor-arg value="101" type="int"></constructor-arg>
+	    <constructor-arg value="Ars" type="String"></constructor-arg>
+	    <constructor-arg value="1001" type="double"></constructor-arg>
+	    <constructor-arg ref="add1"></constructor-arg>
+	    <constructor-arg>
+	    <list>
+	    	<value>Java</value>
+			<value>CPP</value>
+			<value>.NET</value>
+	    </list>
+	    </constructor-arg>
+	    <constructor-arg>
+	    <list>
+	    	<ref bean="prj1"/>
+	    	<ref bean="prj2"/>
+	    	<ref bean="prj3"/>
+	    </list>
+	    </constructor-arg>
+    </bean>  
+
+</beans> 

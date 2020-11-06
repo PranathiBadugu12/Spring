@@ -19,7 +19,7 @@ public class MainClass {
 //		for(Employee e:elist) {
 //			System.out.println(e);
 //		}
-		SalesEmployee s = new SalesEmployee(1,"p",1000,new Address("w","w","w","w"),9000);
+		SalesEmployee s = new SalesEmployee(1,"p",1001,new Address("w","w","w","w"),9000);
 		s.calculateSalary();
 		System.out.println(s.toString());
 		
