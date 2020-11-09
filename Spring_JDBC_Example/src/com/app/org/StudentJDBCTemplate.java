@@ -1,5 +1,7 @@
 package com.app.org;
 
+import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -20,6 +22,11 @@ public class StudentJDBCTemplate implements StudentDAO{
         System.out.println("Record inserted into student table ");
     }
     
+    public List<Student> listStudents(){
+    	String SQL = "select * from student";
+    	List<Student> student = jdbcTemplateObject.query(SQL,new StudentMapper());
+    	return student;
+    }
     
      
     
