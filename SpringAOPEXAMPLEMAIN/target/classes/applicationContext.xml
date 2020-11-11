@@ -10,11 +10,13 @@
     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
 	<aop:aspectj-autoproxy />
 	<!-- Initialization for data source -->
-	<bean id="empMan" class="com.org.app.Employee">
-
+	<bean id="empMan" class="com.app.org.Employee">
+	<property name="name" value="pranathi"></property>
+	<property name="empId" value="10"></property>
+	<property name="salary" value="10000"></property>
 	</bean>
 	<bean id="employeeCRUDAspect"
-		class="com.org.app.EmployeeCRUDAspect"></bean>
+		class="com.app.org.EmployeeCRUDAspect"></bean>
 </beans>
 
 

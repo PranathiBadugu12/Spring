@@ -1,13 +1,15 @@
-package com.org.app;
+package com.app.org.main;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class MyMain {
+import com.app.org.Employee;
+
+public class MainFile {
 public static void main(String args[]) {
 	ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-	EmployeeManager employeeMananger = (EmployeeManager)context.getBean("empMan");
-	System.out.println(employeeMananger.getEmployeeDetails());
+	Employee emp = (Employee) context.getBean("empMan");
+	System.out.println(emp.getSalary());
 	
 //	employeeMananger.printThrowException();
 }

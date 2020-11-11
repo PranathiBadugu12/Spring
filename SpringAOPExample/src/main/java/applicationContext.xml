@@ -10,7 +10,7 @@
     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
 	<aop:aspectj-autoproxy />
 	<!-- Initialization for data source -->
-	<bean id="empMan" class="com.org.app.EmployeeManager">
+	<bean id="empMan" class="com.org.app.Employee">
 
 	</bean>
 	<bean id="employeeCRUDAspect"
